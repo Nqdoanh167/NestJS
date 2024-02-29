@@ -18,7 +18,7 @@ export class QuizService {
   async getAllQuiz(): Promise<Quiz[]> {
     return await this.quizRepository
       .createQueryBuilder('q')
-      .leftJoinAndSelect(Question, 'qt', 'q.id=qt.quizId')
+      .leftJoinAndSelect('q.questions', 'qt')
       .getMany();
   }
   async getQuizById(quizId: string): Promise<Quiz> {

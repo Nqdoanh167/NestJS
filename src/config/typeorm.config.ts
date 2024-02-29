@@ -10,5 +10,5 @@ export const DBOrmConfig: TypeOrmModuleOptions = {
   database: 'db_nest', // Thêm 'photpo' vào mảng database
   entities: [__dirname + '/../**/*.entity{.ts,.js}'],
   synchronize: true,
-  logging: true,
+  //   logging: true,
 };
