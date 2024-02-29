@@ -2,9 +2,20 @@
 
 import { Module } from '@nestjs/common';
 import { AuthModule } from './auth/auth.module';
-import { UserModule } from './user/user.module';
+
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { DBOrmConfig } from './config/typeorm.config';
+import { QuizModule } from './quiz/quiz.module';
+import { QuestionModule } from './question/question.module';
+import { OptionModule } from './option/option.module';
 
 @Module({
-  imports: [AuthModule, UserModule],
+  imports: [
+    AuthModule,
+    QuizModule,
+    TypeOrmModule.forRoot(DBOrmConfig),
+    QuestionModule,
+    OptionModule,
+  ],
 })
 export class AppModule {}
