@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Question } from 'src/question/question.entity';
+import { Question } from '../question/question.entity';
 import {
   BaseEntity,
   Column,

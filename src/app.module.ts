@@ -5,9 +5,10 @@ import { AuthModule } from './auth/auth.module';
 
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DBOrmConfig } from './config/typeorm.config';
-import { QuizModule } from './quiz/quiz.module';
-import { QuestionModule } from './question/question.module';
-import { OptionModule } from './option/option.module';
+
+import { OptionModule } from './modules/option/option.module';
+import { QuizModule } from './modules/quiz/quiz.module';
+import { QuestionModule } from './modules/question/question.module';
 
 @Module({
   imports: [

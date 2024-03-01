@@ -5,7 +5,7 @@ import { QuestionService } from './question.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Question } from './question.entity';
 import { QuestionRepository } from './question.repositoy';
-import { QuizModule } from 'src/quiz/quiz.module';
+import { QuizModule } from '../quiz/quiz.module';
 
 @Module({
   controllers: [QuestionController],

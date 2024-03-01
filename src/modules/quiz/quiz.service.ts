@@ -26,9 +26,7 @@ export class QuizService {
       where: {
         id: quizId,
       },
-      relations: {
-        questions: true,
-      },
+      relations: ['questions', 'questions.options'],
     });
   }
 }

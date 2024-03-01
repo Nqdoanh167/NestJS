@@ -4,7 +4,7 @@ import { OptionController } from './option.controller';
 import { OptionService } from './option.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { OptionRepository } from './option.repository';
-import { QuestionModule } from 'src/question/question.module';
+import { QuestionModule } from '../question/question.module';
 import { Option } from './option.entity';
 
 @Module({

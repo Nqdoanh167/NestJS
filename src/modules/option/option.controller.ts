@@ -3,7 +3,7 @@ import { Body, Controller, Post } from '@nestjs/common';
 import { OptionService } from './option.service';
 import { CreateOptionDto } from './option.dto';
 import { Option } from './option.entity';
-import { QuestionService } from 'src/question/question.service';
+import { QuestionService } from '../question/question.service';
 
 @Controller('option')
 export class OptionController {

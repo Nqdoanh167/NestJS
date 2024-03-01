@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
-import { Option } from 'src/option/option.entity';
-import { Quiz } from 'src/quiz/quiz.entity';
+import { Option } from '../option/option.entity';
+import { Quiz } from '../quiz/quiz.entity';
 import {
   BaseEntity,
   Column,
