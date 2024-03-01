@@ -2,7 +2,7 @@
 import { Question } from '../question/question.entity';
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 
-@Entity()
+@Entity('quizes')
 export class Quiz {
   @PrimaryGeneratedColumn()
   id: string;

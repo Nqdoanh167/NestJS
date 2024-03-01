@@ -1,22 +1,24 @@
 /* eslint-disable prettier/prettier */
 
 import { Module } from '@nestjs/common';
-import { AuthModule } from './auth/auth.module';
 
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { DBOrmConfig } from './config/typeorm.config';
 
+import { AuthModule } from './modules/auth/auth.module';
 import { OptionModule } from './modules/option/option.module';
 import { QuizModule } from './modules/quiz/quiz.module';
 import { QuestionModule } from './modules/question/question.module';
+import { UserModule } from './modules/user/user.module';
+import { dataSourceOptions } from './database/data-source';
 
 @Module({
   imports: [
     AuthModule,
     QuizModule,
-    TypeOrmModule.forRoot(DBOrmConfig),
+    TypeOrmModule.forRoot(dataSourceOptions),
     QuestionModule,
     OptionModule,
+    UserModule,
   ],
 })
 export class AppModule {}
